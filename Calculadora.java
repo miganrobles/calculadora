@@ -23,9 +23,9 @@ public class Calculadora
             System.out.println(num);
         }
     }
-    
+
     /**
-     * Este métod no muestra por pantalla la suma de los números entre el 0 y el 10(ambos incluídos)
+     * Este método muestra por pantalla la suma de los números entre el 0 y el 10(ambos incluídos)
      */
     public void sumValues()
     {
@@ -37,5 +37,30 @@ public class Calculadora
         }
         System.out.println("La suma de los números entre el 0 y el 10(ambos incluídos) es:");
         System.out.println(suma);
+    }
+
+    /**
+     * Este método recibe dos números y devuelve la suma de los valores comprendidos entre ellos ambos incluidos
+     * Si los números son iguales devuelve el mismo números.
+     */
+    public int sumValuesInterval(int num1, int num2)
+    {
+        int resultado = -1;
+        if (num1 >= 0 && num2 >= 0) {
+            int mayor = num2;
+            if (num1 > mayor) {
+                num2 = num1;
+                num1 = mayor;
+            }
+            resultado = num1;
+            while (num1 < num2) {
+                num1++;
+                resultado = num1 + resultado;
+            }
+        }
+        else {
+            System.out.println("ERROR: algúm valor de los introducidos no es positivo.");
+        }
+        return resultado;
     }
 }
