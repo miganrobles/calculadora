@@ -63,4 +63,28 @@ public class Calculadora
         }
         return resultado;
     }
+
+    /**
+     * Este método nos comprueba si un número es primo (devuelve "true") o no (devuelve "false").
+     * En caso de ser menor de 1 nos informa del error por pantalla y nos devuelve "false".
+     */
+    public boolean isPrime(int n) {
+        boolean esPrimo = true;// Partimos de que el número es primo.
+        int divisor = 2;
+        if (n > 1) {
+            while (divisor < n && esPrimo) {
+                if (n % divisor == 0) {
+                    esPrimo = false;
+                }
+                else {
+                    divisor++;
+                }
+            }
+        }
+        else {
+            System.out.println("ERROR: el valor debe de ser mayor que 1.");
+            esPrimo = false;
+        }
+        return esPrimo;
+    }
 }
