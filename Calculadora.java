@@ -35,13 +35,12 @@ public class Calculadora
             num++;
             suma += num;
         }
-        System.out.println("La suma de los números entre el 0 y el 10(ambos incluídos) es:");
-        System.out.println(suma);
+        System.out.println("La suma de los números entre el 0 y el 10(ambos incluídos) es: " + suma);
     }
 
     /**
      * Este método recibe dos números y devuelve la suma de los valores comprendidos entre ellos ambos incluidos
-     * Si los números son iguales devuelve el mismo números.
+     * Si los números son iguales devuelve el mismo número.
      */
     public int sumValuesInterval(int num1, int num2)
     {
@@ -55,7 +54,7 @@ public class Calculadora
             resultado = num1;
             while (num1 < num2) {
                 num1++;
-                resultado = num1 + resultado;
+                resultado += num1;
             }
         }
         else {
