@@ -86,4 +86,24 @@ public class Calculadora
         }
         return esPrimo;
     }
+    
+    /**
+     * Este método recibe dos números y devuelve el valor de multiplicar uno por otro.
+     */
+    public int multiplicaciones(int num1, int num2)
+    {
+        int resultado = -1;
+        if (num1 >= 0 && num2 >= 0) {
+            int multiplicador = 0;
+            resultado = 0;
+            while (multiplicador < num2) {
+                resultado += num1;
+                multiplicador++;
+            }
+        }
+        else {
+            System.out.println("ERROR: algúm valor de los introducidos no es positivo.");
+        }
+        return resultado;
+    }
 }
